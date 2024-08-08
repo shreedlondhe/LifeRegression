@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/shrinivaslondhe/LifeRegressionSuite/src/test/java/Life/Term_Plan_Test.java"><classes><class name="Life.Term_Plan_Test"><methods><include name="tataAIA"/><include name="BajajSmart"/><include name="ICIC"/></methods></class></classes></test></suite>

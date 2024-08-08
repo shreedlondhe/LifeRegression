@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>Motor-TM-Flow</artifactId>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>Motor-TM-Flow</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+
+    <maven.test.skip>false</maven.test.skip>
+
+    <!-- turtlemint / mintpro / saas -->
+    <!--application_platform>ninja</application_platform-->
+    <base_url>https://app.sanity.stage.mintpro.in/</base_url>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <selenium.version>4.11.0</selenium.version>
+    <!-- DRIVER_TYPE = platform type _ application type -->
+    <DRIVER_TYPE>DESKTOP_CHROME</DRIVER_TYPE>
+    <!--groupName>health_tm</groupName-->
+    <DB_VALIDATION>false</DB_VALIDATION>
+    <EVENT_VALIDATION>false</EVENT_VALIDATION>
+    <allure.version>2.13.0</allure.version>
+    <log4j.version>2.11.2</log4j.version>
+    <automation-ops.version>1.0.27</automation-ops.version>
+    <captureLeads>false</captureLeads>
+    <!--ProfilesFor>BAT</ProfilesFor>
+    <APK_FLAVOR>qaui</APK_FLAVOR>
+    <APP_PATH>/Users/ishanaditya/eclipse-workspace/github/fe-automation/apk/</APP_PATH-->
+    <aspectj.version>1.9.9.1</aspectj.version>
+  </properties>
+
+
+
+  <dependencies>
+    <!-- https://mvnrepository.com/artifact/com.assertthat/selenium-shutterbug -->
+    <dependency>
+      <groupId>com.assertthat</groupId>
+      <artifactId>selenium-shutterbug</artifactId>
+      <version>1.5</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+      <groupId>org.testng</groupId>
+      <artifactId>testng</artifactId>
+      <version>6.14.3</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.assertthat/selenium-shutterbug -->
+    <dependency>
+      <groupId>com.assertthat</groupId>
+      <artifactId>selenium-shutterbug</artifactId>
+      <version>1.5</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.aspectj</groupId>
+      <artifactId>aspectjweaver</artifactId>
+      <version>${aspectj.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>${log4j.version}</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-log4j12 -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.30</version>
+      <scope>test</scope>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-maven</artifactId>
+      <version>2.8</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.qameta.allure</groupId>
+      <artifactId>allure-testng</artifactId>
+      <version>2.17.3</version>
+    </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.3.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20230227</version>
+    </dependency>
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>2.15.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-all</artifactId>
+      <version>1.3</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>4.11.0</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+    <dependency>
+      <groupId>commons-io</groupId>
+      <artifactId>commons-io</artifactId>
+      <version>2.4</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+    <dependency>
+      <groupId>com.github.javafaker</groupId>
+      <artifactId>javafaker</artifactId>
+      <version>1.0.2</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.mongodb/mongo-java-driver -->
+    <dependency>
+      <groupId>org.mongodb</groupId>
+      <artifactId>mongo-java-driver</artifactId>
+      <version>3.12.10</version>
+    </dependency>
+
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>5.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.jetbrains</groupId>
+      <artifactId>annotations</artifactId>
+      <version>RELEASE</version>
+      <scope>compile</scope>
+    </dependency>
+      <dependency>
+          <groupId>org.testng</groupId>
+          <artifactId>testng</artifactId>
+          <version>6.14.3</version>
+          <scope>compile</scope>
+      </dependency>
+
+
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+      <resource>
+        <directory>src/main/resources</directory>
+        <targetPath>${project.build.directory}</targetPath>
+        <includes>
+          <include>log4j.properties</include>
+        </includes>
+      </resource>
+    </resources>
+    <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
+      <plugins>
+        <!-- clean lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#clean_Lifecycle -->
+        <plugin>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.1.0</version>
+        </plugin>
+        <!-- default lifecycle, jar packaging: see https://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_jar_packaging -->
+        <plugin>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+
+        <plugin>
+          <groupId>io.qameta.allure</groupId>
+          <artifactId>allure-maven</artifactId>
+          <version>2.10.0</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.1</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+          <configuration>
+            <skipTests>${maven.test.skip}</skipTests>
+            <skip>${maven.test.skip}</skip>
+          </configuration>
+        </plugin>
+
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>3.0.0-M4</version>
+          <configuration>
+            <systemProperties>
+              <allure.results.directory>target/allure-results</allure.results.directory>
+              <application.platform>${application_platform}</application.platform>
+              <DRIVER_TYPE>${DRIVER_TYPE}</DRIVER_TYPE>
+              <groupName>${groupName}</groupName>
+              <TEST_TYPE>${testType}</TEST_TYPE>
+              <captureLeads>${captureLeads}</captureLeads>
+              <DB_VALIDATION>${DB_VALIDATION}</DB_VALIDATION>
+              <EVENT_VALIDATION>${EVENT_VALIDATION}</EVENT_VALIDATION>
+              <ProfilesFor>${ProfilesFor}</ProfilesFor>
+              <APK_FLAVOR>${APK_FLAVOR}</APK_FLAVOR>
+              <APP_PATH>${APP_PATH}</APP_PATH>
+              <!-- <property>
+                  <name>groupNames</name>
+                  <value>${groupName}</value>
+              </property> -->
+            </systemProperties>
+            <testFailureIgnore>true</testFailureIgnore>
+            <argLine>
+              -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar"
+            </argLine>
+            <suiteXmlFiles>
+              <suiteXmlFile>${SuiteXmlFile}</suiteXmlFile>
+            </suiteXmlFiles>
+            <groups>${groupName}</groups>
+          </configuration>
+          <dependencies>
+            <dependency>
+              <groupId>org.aspectj</groupId>
+              <artifactId>aspectjweaver</artifactId>
+              <version>1.9.4</version>
+            </dependency>
+          </dependencies>
+        </plugin>
+
+        <!--        <plugin>-->
+        <!--          <groupId>org.apache.maven.plugins</groupId>-->
+        <!--          <artifactId>maven-surefire-plugin</artifactId>-->
+        <!--          <version>2.19.1</version>-->
+        <!--          <configuration>-->
+        <!--            <suiteXmlFiles>-->
+        <!--              <suiteXmlFile>${SuiteXmlFile}</suiteXmlFile>-->
+        <!--            </suiteXmlFiles>-->
+        <!--            <groups>${groupName}</groups>-->
+        <!--          </configuration>-->
+        <!--        </plugin>-->
+
+        <plugin>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>3.8.0</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>2.22.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>3.0.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-install-plugin</artifactId>
+          <version>2.5.2</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-deploy-plugin</artifactId>
+          <version>2.8.2</version>
+        </plugin>
+        <!-- site lifecycle, see https://maven.apache.org/ref/current/maven-core/lifecycles.html#site_Lifecycle -->
+        <plugin>
+          <artifactId>maven-site-plugin</artifactId>
+          <version>3.7.1</version>
+        </plugin>
+        <plugin>
+          <artifactId>maven-project-info-reports-plugin</artifactId>
+          <version>3.0.0</version>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+      <plugins>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-compiler-plugin</artifactId>
+              <configuration>
+                  <source>9</source>
+                  <target>9</target>
+              </configuration>
+          </plugin>
+      </plugins>
+  </build>
+
+  <reporting>
+    <excludeDefaults>true</excludeDefaults>
+    <plugins>
+      <plugin>
+        <groupId>io.qameta.allure</groupId>
+        <artifactId>allure-maven</artifactId>
+        <version>2.10.0</version>
+        <configuration>
+          <reportVersion>${allure.version}</reportVersion>
+        </configuration>
+      </plugin>
+    </plugins>
+  </reporting>
+
+</project>
